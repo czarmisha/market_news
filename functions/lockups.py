@@ -19,11 +19,11 @@ def get_open_price(ticker, date_str):
     next_date = date + datetime.timedelta(days=1)
     start = date.strftime('%Y-%m-%d')
     end = next_date.strftime('%Y-%m-%d')
-    history = yf.Ticker(ticker).history(start=start, end=end, interval='1d')
+    history = yf.Ticker(ticker).history(start=start, end=end, interval='1d').reset_index()
     if history.empty:
         return '-'
-    open_price = history[history == start].Open[0]
-    return open_price
+    open_price = history[history.Date == start].Open[0]
+    return f'${open_price}' if open_price else '-'
 
 
 def get_mcap(ticker):
