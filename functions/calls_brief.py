@@ -1,18 +1,69 @@
 """
-Research Calls (Briefing) (upgrades, downgrades, target changes и initiating, которые известны на текущее время; пример сообщения)
-Время публикации: при появлении соответствующих сообщений на briefing
-Источник данных: briefing
-Комментарий: -
-
-Research Calls (Marketbeat) (upgrades, downgrades, target changes и initiating, которые известны на 08:00 EST и те, о которых стало известно с 08:00 до 09:00 EST; сообщения публикуются в виде єкселевского файла и картинки с таблицей; пример сообщений:1, 2)
-Время публикации: 08:00 EST и 09:00 EST
-Источник данных: marketbeat.com
-Комментарий: в отличии от briefing.com, marketbeat.com отображает данные в табличной форме и в более полном объеме, что позволяет публиковать их в канале в более читабельной и удобной для анализа форме, но на briefing.com эти данные выходят оперативнее.
-
-https://www.briefing.com/InPlayEq/Search/Ticker.htm?ticker=calls
-7:28 research calls 1 если не нашел крутить каждую минуту в течении 12мин? проверить пересечения
-7:40 research calls 2 если не нашел крутить каждые 10 минут в течении 20-30мин? проверить пересечения
-9:00 research calls 3  если не нашел крутить каждые 5 минут в течении 10-15мин? проверить пересечения
+Research Calls (Briefing) (upgrades, downgrades, target changes и initiating, которые известны на текущее время;)
 """
+import datetime
+
+from utils import briefing
+from config import urls
+
+
 def main():
-    pass
+    print('**** Research calls ****')
+    call_1, call_2, call_3 = False, False, False
+    call_number = None
+
+    with open('r_calls_progress.txt') as file:
+        progress = file.read().split(',')
+
+    if not call_1 and not 'call_1' in progress:
+        call_1 = True
+        call_number = ''
+    elif not call_2 and not 'call_2' in progress:
+        call_1 = True
+        call_2 = True
+        call_number = 'II'
+    elif not call_3 and not 'call_3' in progress:
+        call_2 = True
+        call_3 = True
+        call_number = 'III'
+    
+    if call_number is None:
+        print('!!! error call_number !!!')
+        return 
+
+    output = f'*Research Calls {call_number}*'.strip() + '\n\n'
+    
+    parser = briefing.BriefingParser(urls.url_r_calls)
+    soup = parser.soup
+    rows = soup.find_all('tr', class_='inplayRow')
+    today = datetime.datetime.now().strftime('%d-%b-%y')
+
+    for row in rows:
+        row_date = row.find('span', attrs={'id': 'ArticleTime'})
+        if not row_date == today:
+            return
+        
+        row_title = row.find('td', attrs={'class': 'articleColumn'}).find('div', attrs={'class': 'lip-title'}).text
+        if not row_title == output:
+            continue
+
+        row_text = row.find('td', attrs={'class': 'articleColumn'}).find('div', attrs={'class': 'lip-article'}).find('ul')
+        tmp = ''
+        for li in row_text.find_all('li'):
+            tmp += f"{li.text.split(':')[0]}\n"
+            tmp += f"{li.text.split(':')[1]}\n"
+        
+        with open('r_calls_progress.txt', 'a') as file:
+            to_write = 'call_1'
+            if call_number == 'II':
+                to_write = 'call_2'
+            elif call_number == 'III':
+                to_write = 'call_3'
+
+            file.write(to_write + ',')
+        
+        output += tmp + '\n'
+        break
+
+    print(output)
+

@@ -15,11 +15,21 @@ from functions.calls_brief import main as calls_brief
 import config.execution_time as cfg_time
 
 
+def clean_file():
+    """просто файл отслеживаться какой из 3х калов уже были отправлены во избежании повторений"""
+    print('** cleaning file **')
+    with open('r_calls_progress.txt', 'w') as file: 
+        file.write('') # обнуляем файл
+
 def main():
     # indexes()
     # ipo()
-    lockups()
+    # lockups()
+    calls_brief()
+    calls_brief()
+    calls_brief()
     print('****** PROGRAM STARTING ******')
+
     tg_bot = bot.BotHandler()
     tg_bot.send_message('Program starting')
 
@@ -29,6 +39,7 @@ def main():
     schedule.every().monday.at("05:30").do(week_earnings)
     # планируем запуск функции earnings_moves каждый день в 06:00
     schedule.every().day.at("06:00").do(earnings_moves)
+    schedule.every().day.at("06:50").do(clean_file)
     # планируем запуск функции earnings каждый день в 07:00
     schedule.every().day.at("07:00").do(earnings)
     # планируем запуск функции conf_calls каждый день в 07:40

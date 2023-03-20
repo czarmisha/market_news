@@ -1,4 +1,5 @@
 url_inPlay = 'https://www.briefing.com/InPlayEq/InPlay/InPlay.htm'
+url_r_calls = 'https://www.briefing.com/InPlayEq/Search/ticker.htm?ticker=calls&range=6'
 url_tickerEarn = r'https://www.briefing.com/InPlayEq/Search/ticker.htm?ticker=%s&page=EARNINGS&range=60'
 url_offerings = r'https://www.briefing.com/InPlayEq/Search/ticker.htm?ticker=price&range=%s'
 url_calendars = 'https://www.briefing.com/InPlayEq/Calendars.htm'
