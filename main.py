@@ -16,6 +16,8 @@ import config.execution_time as cfg_time
 
 
 def main():
+    indexes()
+    ipo()
     lockups()
     print('****** PROGRAM STARTING ******')
     tg_bot = bot.BotHandler()

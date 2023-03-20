@@ -63,7 +63,10 @@ def finviz_parse():
                             'onclick' : "window.location='calendar.ashx'"
                             }):
         cols = row.find_all('td') # берем все колонки каждой строки
+        if len(cols) == 3:
+            return ''
         calendar_list += f'{cols[1].text} {cols[3].text}\n' # cols[1].text - время, cols[3].text - название события
+    return calendar_list
 
 
 def main():
