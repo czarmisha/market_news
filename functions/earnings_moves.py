@@ -7,7 +7,7 @@ Early earnings moves (GapUp-ы и GapDown-ы по акциям, которые �
 """
 from config import urls
 from utils.briefing import BriefingParser
-from utils.percent_change import get_percent_change
+from utils.percent_change import get_current_percent_change
 from telegram import bot
 
 
@@ -57,7 +57,7 @@ def main():
         file.write(','.join(amc))
     
     # для всех тикеров получаем объект вида {'GapUp': {'CSIQ': '+15.9%', 'ONON': '+25.2%'}, 'GapDown': {'HUYA': '-15.1%', 'TME': '-9.1%'}}
-    per_change = get_percent_change(bmo + amc)
+    per_change = get_current_percent_change(bmo + amc)
 
     #красиво печатаем все
     for gap in per_change:

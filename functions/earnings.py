@@ -5,7 +5,7 @@ Earnings (список тикеров, компаний, которые публ
 Комментарий: нужно посмотреть, как реализован сбор информации для этого сообщения в текущей версии бота
 
 """
-from utils.percent_change import get_percent_change
+from utils.percent_change import get_current_percent_change
 from telegram import bot
 
 
@@ -20,7 +20,7 @@ def main():
         amc = file.read().split(',')
     
     # для всех тикеров получаем объект вида {'GapUp': {'CSIQ': '+15.9%', 'ONON': '+25.2%'}, 'GapDown': {'HUYA': '-15.1%', 'TME': '-9.1%'}}
-    per_change = get_percent_change(bmo + amc)
+    per_change = get_current_percent_change(bmo + amc)
 
     #красиво печатаем все
     for gap in per_change:
