@@ -5,6 +5,7 @@ url_offerings = r'https://www.briefing.com/InPlayEq/Search/ticker.htm?ticker=pri
 url_calendars = 'https://www.briefing.com/InPlayEq/Calendars.htm'
 url_sumrx = 'https://www.briefing.com/InPlayEq/Search/Ticker.htm?ticker=SUMRX'
 url_briefing_domain = 'https://www.briefing.com'
+url_briefing_login = 'https://www.briefing.com/brflogin'
 url_indxch = 'https://www.briefing.com/InPlayEq/Search/Ticker.htm?ticker=INDXCH'
 
 # url for FUTURES from marketwatch.com
@@ -22,9 +23,6 @@ url_marketwatch_spx_vix_futures = 'https://www.marketwatch.com/investing/index/v
 url_finviz = 'https://finviz.com/'
 url_finviz_ticker = 'https://finviz.com/quote.ashx'
 url_ipo_calendar = 'https://www.iposcoop.com/ipo-calendar/'
-
-# url for 3 research calls
-url_upgr_dwng = 'https://www.briefing.com/InPlayEq/Search/ticker.htm?ticker=calls&range=6'
 
 # url for ratings and targets excel file
 url_marketbeat_calls = 'https://www.marketbeat.com/ratings/us/'

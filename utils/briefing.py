@@ -9,12 +9,12 @@ from config import urls
 options = FirefoxOptions()
 driver = webdriver.Firefox(options=options)
 driver.set_window_size(1500, 1200)
-driver.get(urls.url_briefing_domain)
+# driver.get(urls.url_briefing_domain)
 
 
 class BriefingParser:
     def __init__(self, url_string):
-        self.target_url = urls.url_inPlay
+        self.target_url = urls.url_briefing_login
         self.driver = driver
         self.html_text, self.soup = '', ''
         self.get_html_text()
@@ -29,7 +29,7 @@ class BriefingParser:
 
     def get_html_text(self):
         self.driver.get(self.target_url)
-        time.sleep(10)
+        time.sleep(15)
         self.html_text = self.driver.execute_script("return document.getElementsByTagName('html')[0].innerHTML")
 
     def get_soup(self):

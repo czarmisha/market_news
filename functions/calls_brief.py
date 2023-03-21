@@ -39,19 +39,23 @@ def main():
     today = datetime.datetime.now().strftime('%d-%b-%y')
 
     for row in rows:
-        row_date = row.find('span', attrs={'id': 'ArticleTime'})
+        row_date = row.find('span', attrs={'id': 'ArticleTime'}).text.split(' ')[0]
         if not row_date == today:
             return
         
         row_title = row.find('td', attrs={'class': 'articleColumn'}).find('div', attrs={'class': 'lip-title'}).text
         if not row_title == output:
             continue
+        output += '\n'
 
         row_text = row.find('td', attrs={'class': 'articleColumn'}).find('div', attrs={'class': 'lip-article'}).find('ul')
         tmp = ''
         for li in row_text.find_all('li'):
+            if li.text.split(':')[0] in ['Upgrades', 'Downgrades', 'Others']:
+                tmp += f"\n{li.text.split(':')[0]}\n"
+                continue
+            
             tmp += f"{li.text.split(':')[0]}\n"
-            tmp += f"{li.text.split(':')[1]}\n"
         
         with open('r_calls_progress.txt', 'a') as file:
             to_write = 'call_1'
@@ -65,5 +69,5 @@ def main():
         output += tmp + '\n'
         break
 
-    print(output)
+    print(output) # TODO send to telegram
 
