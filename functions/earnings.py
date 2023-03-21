@@ -6,6 +6,7 @@ Earnings (список тикеров, компаний, которые публ
 
 """
 from utils.percent_change import get_percent_change
+from telegram import bot
 
 # TODO comment
 def main():
@@ -34,4 +35,8 @@ def main():
     for ticker in bmo:
         output += f'{ticker}\n'
 
-    print(output) # TODO send to telegram
+    print('-- done earnings --')
+    print(output)
+    tg_bot = bot.BotHandler()
+    tg_bot.send_post(output)
+    tg_bot.send_message('-- done earnings --')

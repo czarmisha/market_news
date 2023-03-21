@@ -8,6 +8,7 @@ Early earnings moves (GapUp-ы и GapDown-ы по акциям, которые �
 from config import urls
 from utils.briefing import BriefingParser
 from utils.percent_change import get_percent_change
+from telegram import bot
 
 
 def get_tickers(soup, table_id):
@@ -54,6 +55,9 @@ def main():
             output += f'*{stock}* {per_change[gap][stock]}; '
         output = '\n\n'
 
-    print(output) # TODO send to telegram
-
+    print('-- done earning moves --')
+    print(output)
+    tg_bot = bot.BotHandler()
+    tg_bot.send_post(output)
+    tg_bot.send_message('-- done earning moves --')
 

@@ -7,6 +7,7 @@ import datetime
 
 from utils.create_soup import create_soup
 from config import urls
+from telegram import bot
 
 
 now = datetime.datetime.now()
@@ -120,5 +121,9 @@ def main():
 
     output = create_output_str()
     output += '#lockups'
+
     print('-- done lockups --')
-    print(output) #TODO send to telegram
+    print(output)
+    tg_bot = bot.BotHandler()
+    tg_bot.send_post(output)
+    tg_bot.send_message('-- done lockups --')

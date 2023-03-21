@@ -5,6 +5,7 @@ import datetime
 
 from utils.briefing import BriefingParser
 from config import urls
+from telegram import bot
 
 # TODO comment
 def main():
@@ -69,5 +70,9 @@ def main():
         output += tmp + '\n'
         break
 
-    print(output) # TODO send to telegram
+    print(f'-- done research calls {call_number} (briefing) --')
+    print(output)
+    tg_bot = bot.BotHandler()
+    tg_bot.send_post(output)
+    tg_bot.send_message(f'-- done research calls {call_number} (briefing) --')
 

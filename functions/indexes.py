@@ -14,6 +14,7 @@ from fake_useragent import UserAgent
 
 from utils.create_soup import create_soup 
 from config import urls
+from telegram import bot
 
 
 def marketwatch_parse(url, name):
@@ -108,11 +109,7 @@ def main():
         output += '\n#futures'
 
     print('-- done index parsing --')
-    print(output) #TODO send to telegram
-
-
-if __name__ == '__main__':
-    try:
-        main()
-    except KeyboardInterrupt:
-        exit()
+    print(output)
+    tg_bot = bot.BotHandler()
+    tg_bot.send_post(output)
+    tg_bot.send_message('-- done index parsing --')
