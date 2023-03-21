@@ -18,20 +18,20 @@ import config.execution_time as cfg_time
 def clean_file():
     """просто файл отслеживаться какой из 3х калов уже были отправлены во избежании повторений"""
     print('** cleaning file **')
-    with open('r_calls_progress.txt', 'w') as file: 
+    with open('tmp/r_calls_progress.txt', 'w') as file: 
         file.write('') # обнуляем файл
 
 def main():
     # indexes()
     # ipo()
     # lockups()
-    calls_brief()
-    calls_brief()
-    calls_brief()
+    # calls_brief()
+    # calls_brief()
+    # calls_brief()
+    # earnings()
     print('****** PROGRAM STARTING ******')
-
     tg_bot = bot.BotHandler()
-    tg_bot.send_message('Program starting')
+    tg_bot.send_message('*Program starting*')
 
     # планируем запуск функции indexes каждый день в 05:00
     schedule.every().day.at("05:00").do(indexes)
@@ -56,7 +56,6 @@ def main():
     schedule.every().day.at("13:00").do(indxch)
 
     #TODO quadruple triple etc every friday
-    #TODO log file every day?
 
     # research calls. 
     for check_time in cfg_time.research_calls_briefing:

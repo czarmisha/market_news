@@ -9,12 +9,12 @@ from config import urls
 options = FirefoxOptions()
 driver = webdriver.Firefox(options=options)
 driver.set_window_size(1500, 1200)
-# driver.get(urls.url_briefing_domain)
+driver.get(urls.url_briefing_domain)
 
-
+# TODO comment
 class BriefingParser:
     def __init__(self, url_string):
-        self.target_url = urls.url_briefing_login
+        self.target_url = urls.url_inPlay
         self.driver = driver
         self.html_text, self.soup = '', ''
         self.get_html_text()

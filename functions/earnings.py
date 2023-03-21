@@ -5,5 +5,9 @@ Earnings (список тикеров, компаний, которые публ
 Комментарий: нужно посмотреть, как реализован сбор информации для этого сообщения в текущей версии бота
 
 """
+from utils.briefing import BriefingParser
+from config import urls
+
 def main():
-    pass
+    parser = BriefingParser(urls.url_calendars)
+    soup = parser.soup

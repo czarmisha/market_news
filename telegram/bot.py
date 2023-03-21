@@ -12,7 +12,7 @@ class BotHandler:
     def __init__(self):
         bot_api_url = cfg_credentials.BOT_API_URL
         self.token = cfg_credentials.BOT_TOKEN
-        self.api_url = f"{bot_api_url}{self.token}"
+        self.api_url = f"{bot_api_url}{self.token}/"
         self.chat_id = cfg_credentials.CHAT_ID
         self.last_update_id = 0
 
@@ -34,7 +34,7 @@ class BotHandler:
         resp = requests.post(self.api_url + method, params)
         return resp
 
-    def send_post(self, channel_id, text):
+    def send_post(self, text, channel_id=cfg_credentials.CHANNEL_CHAT_ID):
         params = {'chat_id': channel_id, 'text': text, "parse_mode": "Markdown"}
         method = 'sendMessage'
         resp = requests.post(self.api_url + method, params)

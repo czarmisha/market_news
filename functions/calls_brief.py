@@ -3,16 +3,16 @@ Research Calls (Briefing) (upgrades, downgrades, target changes Ð¸ initiating, Ð
 """
 import datetime
 
-from utils import briefing
+from utils.briefing import BriefingParser
 from config import urls
 
-
+# TODO comment
 def main():
     print('**** Research calls ****')
     call_1, call_2, call_3 = False, False, False
     call_number = None
 
-    with open('r_calls_progress.txt') as file:
+    with open('tmp/r_calls_progress.txt') as file:
         progress = file.read().split(',')
 
     if not call_1 and not 'call_1' in progress:
@@ -33,7 +33,7 @@ def main():
 
     output = f'*Research Calls {call_number}*'.strip() + '\n\n'
     
-    parser = briefing.BriefingParser(urls.url_r_calls)
+    parser = BriefingParser(urls.url_r_calls)
     soup = parser.soup
     rows = soup.find_all('tr', class_='inplayRow')
     today = datetime.datetime.now().strftime('%d-%b-%y')
@@ -52,12 +52,12 @@ def main():
         tmp = ''
         for li in row_text.find_all('li'):
             if li.text.split(':')[0] in ['Upgrades', 'Downgrades', 'Others']:
-                tmp += f"\n{li.text.split(':')[0]}\n"
+                tmp += f"\n_{li.text.split(':')[0]}_\n"
                 continue
             
             tmp += f"{li.text.split(':')[0]}\n"
         
-        with open('r_calls_progress.txt', 'a') as file:
+        with open('tmp/r_calls_progress.txt', 'a') as file:
             to_write = 'call_1'
             if call_number == 'II':
                 to_write = 'call_2'
