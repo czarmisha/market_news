@@ -9,6 +9,8 @@ def get_current_percent_change(tickers):
     }
 
     for ticker in tickers:
+        if not ticker:
+            continue
         start = (datetime.datetime.now() + datetime.timedelta(days=7)).strftime('%Y-%m-%d')
         end = datetime.datetime.now().strftime('%Y-%m-%d')
         try:

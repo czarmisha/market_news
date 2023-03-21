@@ -5,9 +5,33 @@ Earnings (список тикеров, компаний, которые публ
 Комментарий: нужно посмотреть, как реализован сбор информации для этого сообщения в текущей версии бота
 
 """
-from utils.briefing import BriefingParser
-from config import urls
+from utils.percent_change import get_percent_change
 
+# TODO comment
 def main():
-    parser = BriefingParser(urls.url_calendars)
-    soup = parser.soup
+    print('**** Earnings ****')
+    output = 'Earnings:\n\n'
+
+    with open('tmp/bmo_list.txt', 'r') as file:
+        bmo = file.read().split(',')
+
+    with open('tmp/amc_list.txt', 'r') as file:
+        amc = file.read().split(',')
+    
+    per_change = get_percent_change(bmo + amc)
+
+    for gap in per_change:
+        output += f'_{gap}_: '
+        for stock in per_change[gap]:
+            output += f'*{stock}* {per_change[gap][stock]}; '
+        output += '\n\n'
+    
+    output += '-----*AMC*-----'
+    for ticker in amc:
+        output += f'{ticker}\n'
+
+    output += '\n-----*BMO*-----'
+    for ticker in bmo:
+        output += f'{ticker}\n'
+
+    print(output) # TODO send to telegram

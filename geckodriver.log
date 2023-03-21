@@ -484,3 +484,4 @@ JavaScript error: chrome://remote/content/RemoteAgent.jsm, line 36: Error: Remot
 1679423963222	Marionette	INFO	Listening on port 59181
 DevTools listening on true
 1679423963568	Marionette	WARN	TLS certificate errors will be ignored for this session
+1679425088289	Marionette	INFO	Stopped listening on port 59181
