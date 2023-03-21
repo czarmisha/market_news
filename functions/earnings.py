@@ -8,19 +8,21 @@ Earnings (список тикеров, компаний, которые публ
 from utils.percent_change import get_percent_change
 from telegram import bot
 
-# TODO comment
+
 def main():
     print('**** Earnings ****')
     output = 'Earnings:\n\n'
 
-    with open('tmp/bmo_list.txt', 'r') as file:
+    with open('tmp/bmo_list.txt', 'r') as file: # берем с файла список тикеров с отчетами bmo
         bmo = file.read().split(',')
 
-    with open('tmp/amc_list.txt', 'r') as file:
+    with open('tmp/amc_list.txt', 'r') as file: # берем с файла список тикеров с отчетами amc
         amc = file.read().split(',')
     
+    # для всех тикеров получаем объект вида {'GapUp': {'CSIQ': '+15.9%', 'ONON': '+25.2%'}, 'GapDown': {'HUYA': '-15.1%', 'TME': '-9.1%'}}
     per_change = get_percent_change(bmo + amc)
 
+    #красиво печатаем все
     for gap in per_change:
         output += f'_{gap}_: '
         for stock in per_change[gap]:

@@ -38,13 +38,13 @@ def get_ipo_info(url):
     table = soup.find('table', attrs={'class': 'ipo-table'})
     rows = table.find_all('tr') # все строки из таблицы
     data_info = {
-        'Ticker' : rows[15].find_all('td')[1].get_text(), # просто берем текст из 15 колонки
-        'Exchange' : rows[16].find_all('td')[1].get_text(), # просто берем текст из 16 колонки
+        'Ticker' : rows[15].find_all('td')[1].get_text(), # просто берем текст из 16 колонки
+        'Exchange' : rows[16].find_all('td')[1].get_text(), # просто берем текст из 17 колонки
         'Company': soup.find('h3', attrs={'class': 'section-title'}).span.get_text(), # в html ищем h3 с классом section-title
         'IPO amount (sh)': f"{rows[17].find_all('td')[1].get_text()}M",
         'Price range': rows[18].find_all('td')[1].get_text(),
         'IPO est. value': rows[19].find_all('td')[1].get_text(),
-        'Mcap': normalize_mcap(rows[11].find_all('td')[1].get_text()), # просто берем текст из 11 колонки и нормализуем его
+        'Mcap': normalize_mcap(rows[11].find_all('td')[1].get_text()), # просто берем текст из 12 колонки и нормализуем его
         'Industry': rows[2].find_all('td')[1].get_text()
     }
     return data_info
@@ -68,7 +68,7 @@ def main():
     # цикл по всем строкам таблицы
     for row in calendar.tbody.find_all('tr'):
         row_columns = row.find_all('td') # это все столбцы данной строки
-        date_str = row_columns[7].get_text().split(' ')[0] # из 7й колонки берем строку с датой
+        date_str = row_columns[7].get_text().split(' ')[0] # из 8й колонки берем строку с датой
         date = datetime.datetime.strptime(date_str, '%m/%d/%Y') # из строки делаем объект даты
         today = datetime.datetime.now().replace(hour=0, minute=0, second=0, microsecond=0) # сегодняшняя дата для сравнений
         #если дата IPO не совпадает с сегодняшней датой, переходим к следующей строке
