@@ -30,7 +30,7 @@ def get_tickers(soup, table_id):
     # идем по каждой строке(по каждому отчету)
     for row in rows:
         row_columns = row.find_all('td') # все колонки конкретной строки/отчета
-        tickers.append(row_columns[5].text) # добавляем в общий список акций тикер из текущей строки(он в 6 колонке)
+        tickers.append(row_columns[5].div.text) # добавляем в общий список акций тикер из текущей строки(он в 6 колонке)
 
     return tickers
 

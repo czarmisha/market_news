@@ -60,7 +60,7 @@ def finviz_parse():
         return ''
     # пробегаемся по каждый строке таблицы
     for row in table.find_all('tr', attrs={
-                            'class' : "table-light-row-cp",
+                            #'class' : "table-light-row-cp",
                             'onclick' : "window.location='calendar.ashx'"
                             }):
         cols = row.find_all('td') # берем все колонки каждой строки
