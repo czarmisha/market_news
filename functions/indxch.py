@@ -26,7 +26,7 @@ month = [datetime.datetime.strptime(f'2022-{i}-1', '%Y-%m-%d').strftime('%B') fo
 mon = [datetime.datetime.strptime(f'2022-{i}-1', '%Y-%m-%d').strftime('%b') for i in range(1, 13)]
 week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 
-
+#TODO нужно проверять года если дата новости 22год декабрь, а в новости дата январь 5, то нужно проверить месяц в новости если меньше то год + 1
 def main():
     now = datetime.datetime.now() # datetime
     today = now.strftime("%Y-%m-%d") 
@@ -70,8 +70,10 @@ def main():
                             day_x = int(words[i + 1]) # по идее после месяца идет число даты
                         except ValueError:
                             continue
+                        
+                        if m + 1 > post_date.month:
+                            year_now = f'{int(year_now) + 1}'
                         data_in_text = words[i] + "//" + str(day_x) + '//' + year_now # месяц//число//текущий год строка
-                        print(data_in_text)
                         data_in_text_dt = datetime.datetime.strptime(data_in_text, "%B//%d//%Y") # месяц//число//текущий год ДАТА
                         prev_data_in_text_dt = data_in_text_dt - datetime.timedelta(days=1) # предыдущий день  дата ???
                         break
@@ -81,6 +83,9 @@ def main():
                             day_x = int(words[i + 1]) # по идее после месяца идет число даты
                         except ValueError:
                             continue
+
+                        if m + 1 > post_date.month:
+                            year_now = f'{int(year_now) + 1}'
                         data_in_text = words[i] + "//" + str(day_x) + '//' + year_now  # месяц укороченный//число//текущий год строка
                         data_in_text_dt = datetime.datetime.strptime(data_in_text, "%b//%d//%Y") # месяц укороченный//число//текущий год ДАТА
                         prev_data_in_text_dt = data_in_text_dt - datetime.timedelta(days=1) # предыдущий день  дата ???
