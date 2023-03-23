@@ -21,14 +21,19 @@ def get_current_percent_change(tickers):
         try:
             # тянем историческую котировку за прошлую неделю(неважно) и берем самый последний день - это будет вчерашний торговый день. берем его закрытие
             close_pr = yf.Ticker(ticker).history(start=start, end=end).reset_index().iloc[-1].Close
+            print('close_pr', close_pr)
             # тянем историческую котировку до текущего момента и берем клоуз последней свечки - это самая последняя цена на акцию
             # проверяем так же дату последней свечки с сегодняшней (чтобы не взять вчерашний афтермаркет)
             curr_pr_series = yf.Ticker(ticker).history(period='max', interval='1m', prepost=True).reset_index().iloc[-1]
+            print('curr_pr_series', curr_pr_series)
             if not curr_pr_series.Datetime.date() == datetime.date.today():
+                print('test continue')
                 continue
             curr_pr = curr_pr_series.Close
+            print('curr_pr', curr_pr)
 
             change = round((curr_pr / close_pr - 1) * 100, 1) # считаем %
+            print('change', change)
             
             # добавляем в наш объект и если изменение > 0, добавляем `+` в начало. и всем `%` в конец
             if change >= 0:
@@ -36,6 +41,7 @@ def get_current_percent_change(tickers):
             else:
                 data['GapDown'][ticker] =  f'{change}%'
 
+            #TODO do sorting
         except Exception:
             continue
     

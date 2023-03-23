@@ -547,3 +547,234 @@ console.warn: AboutLoginsParent: "AboutLogins:OpenSite: expected to find a login
 console.warn: AboutLoginsParent: "AboutLogins:OpenSite: expected to find a login for guid: undefined but found 0"
 console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2252))
 console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2252))
+JavaScript error: resource://devtools/client/jsonview/converter-observer.js, line 76: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+1679514717753	Marionette	INFO	Stopped listening on port 62547
+9514716478	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60301" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofileUeqOcO"
+1679514716763	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1679514716865	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1679514716865	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1679514716866	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1679514716866	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: chrome://remote/content/RemoteAgent.jsm, line 36: Error: Remote agent is disabled by preference
+1679514719941	Marionette	INFO	Listening on port 60312
+DevTools listening on true
+1679514720091	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390001,name=PCookieService::Msg_SetCookieString) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390001,name=PCookieService::Msg_SetCookieString) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x660029,name=PNecko::Msg_RemoveRequestContext) Closed channel: cannot send/recv
+
+JavaScript error: resource:///actors/AboutReaderChild.jsm, line 95: NS_ERROR_UNEXPECTED: 
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x370116,name=PContent::Msg_ReportContentBlockingLog) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x37012C,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x37012C,name=PContent::Msg_DetachBrowsingContext) Closed channel: cannot send/recv
+
+1679544728188	geckodriver	INFO	Listening on 127.0.0.1:58294
+1679544731190	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58295" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofile4k9dHP"
+1679544731517	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1679544731600	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1679544731600	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1679544731600	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1679544731600	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: chrome://remote/content/RemoteAgent.jsm, line 36: Error: Remote agent is disabled by preference
+1679544732757	Marionette	INFO	Listening on port 58305
+DevTools listening on true
+1679544733201	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 9656, MediaDecoderStateMachine #1] WARNING: 2aed796e340 Can't get cubeb context!: file z:/task_1579288126/build/src/dom/media/AudioStream.cpp, line 285
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aed796bc00 [OnMediaSinkAudioError]: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3689
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aed796bc00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3337
+[Child 9656, MediaDecoderStateMachine #1] WARNING: 2aedc869400 Can't get cubeb context!: file z:/task_1579288126/build/src/dom/media/AudioStream.cpp, line 285
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aee4d47c00 [OnMediaSinkAudioError]: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3689
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aee4d47c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3337
+[Child 9656, MediaDecoderStateMachine #1] WARNING: 2aedcd5ac40 Can't get cubeb context!: file z:/task_1579288126/build/src/dom/media/AudioStream.cpp, line 285
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aee4ee2c00 [OnMediaSinkAudioError]: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3689
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aee4ee2c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3337
+[Child 9656, MediaDecoderStateMachine #1] WARNING: 2aede22e700 Can't get cubeb context!: file z:/task_1579288126/build/src/dom/media/AudioStream.cpp, line 285
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aede109800 [OnMediaSinkAudioError]: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3689
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aede109800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3337
+[Child 9656, MediaDecoderStateMachine #1] WARNING: 2aede19f280 Can't get cubeb context!: file z:/task_1579288126/build/src/dom/media/AudioStream.cpp, line 285
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aede16a800 [OnMediaSinkAudioError]: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3689
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aede16a800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3337
+[Child 9656, MediaDecoderStateMachine #1] WARNING: 2aede89f700 Can't get cubeb context!: file z:/task_1579288126/build/src/dom/media/AudioStream.cpp, line 285
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aede854c00 [OnMediaSinkAudioError]: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3689
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aede854c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3337
+[Child 9656, MediaDecoderStateMachine #1] WARNING: 2aedea51e80 Can't get cubeb context!: file z:/task_1579288126/build/src/dom/media/AudioStream.cpp, line 285
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aedea11400 [OnMediaSinkAudioError]: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3689
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aedea11400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3337
+[Child 9656, MediaDecoderStateMachine #1] WARNING: 2aedec68580 Can't get cubeb context!: file z:/task_1579288126/build/src/dom/media/AudioStream.cpp, line 285
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aedec76800 [OnMediaSinkAudioError]: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3689
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aedec76800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3337
+[Child 9656, MediaDecoderStateMachine #1] WARNING: 2aedecfeb80 Can't get cubeb context!: file z:/task_1579288126/build/src/dom/media/AudioStream.cpp, line 285
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aedeccf800 [OnMediaSinkAudioError]: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3689
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aedeccf800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3337
+[Child 9656, MediaDecoderStateMachine #1] WARNING: 2aedf095280 Can't get cubeb context!: file z:/task_1579288126/build/src/dom/1679565928142	Marionette	INFO	Stopped listening on port 59365
+Machine #1] WARNING: Decoder=2aedf05ac00 [OnMediaSinkAudioError]: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3689
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aedf05ac00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3337
+[Child 9656, MediaDecoderStateMachine #1] WARNING: 2aedf6b8a00 Can't get cubeb context!: file z:/task_1579288126/build/src/dom/media/AudioStream.cpp, line 285
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aedf673000 [OnMediaSinkAudioError]: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3689
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aedf673000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3337
+[Child 9656, MediaDecoderStateMachine #1] WARNING: 2aee541e040 Can't get cubeb context!: file z:/task_1579288126/build/src/dom/media/AudioStream.cpp, line 285
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aee53e6400 [OnMediaSinkAudioError]: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3689
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aee53e6400 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3337
+[Child 9656, MediaDecoderStateMachine #1] WARNING: 2aee54c4640 Can't get cubeb context!: file z:/task_1579288126/build/src/dom/media/AudioStream.cpp, line 285
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aee5489c00 [OnMediaSinkAudioError]: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3689
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aee5489c00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3337
+[Child 9656, MediaDecoderStateMachine #1] WARNING: 2aee59eddc0 Can't get cubeb context!: file z:/task_1579288126/build/src/dom/media/AudioStream.cpp, line 285
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aee599ac00 [OnMediaSinkAudioError]: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3689
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aee599ac00 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3337
+[Child 9656, MediaDecoderStateMachine #1] WARNING: 2aee5a5c4c0 Can't get cubeb context!: file z:/task_1579288126/build/src/dom/media/AudioStream.cpp, line 285
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aee5a14000 [OnMediaSinkAudioError]: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3689
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aee5a14000 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3337
+[Child 9656, MediaDecoderStateMachine #1] WARNING: 2aee5b63c40 Can't get cubeb context!: file z:/task_1579288126/build/src/dom/media/AudioStream.cpp, line 285
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aee5b4f800 [OnMediaSinkAudioError]: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3689
+[Child 9656, MediaDecoderStateMachine #1] WARNING: Decoder=2aee5b4f800 Decode error: NS_ERROR_DOM_MEDIA_MEDIASINK_ERR (0x806e000b) - OnMediaSinkAudioError: file z:/task_1579288126/build/src/dom/media/MediaDecoderStateMachine.cpp, line 3337
+1679565926453	Marionette	INFO	Stopped listening on port 58305
+1679565960806	geckodriver	INFO	Listening on 127.0.0.1:53329
+1679565963822	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53330" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofilefswncQ"
+1679565964061	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1679565964138	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1679565964138	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1679565964138	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1679565964138	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: chrome://remote/content/RemoteAgent.jsm, line 36: Error: Remote agent is disabled by preference
+1679565965113	Marionette	INFO	Listening on port 53338
+DevTools listening on true
+1679565965330	Marionette	WARN	TLS certificate errors will be ignored for this session
+1679568345392	Marionette	INFO	Stopped listening on port 53338
+9566591163	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54126" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofileXidoVu"
+1679566591394	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1679566591471	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1679566591471	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1679566591471	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1679566591471	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: chrome://remote/content/RemoteAgent.jsm, line 36: Error: Remote agent is disabled by preference
+1679566592476	Marionette	INFO	Listening on port 54134
+DevTools listening on true
+1679566592671	Marionette	WARN	TLS certificate errors will be ignored for this session
+1679568344378	Marionette	INFO	Stopped listening on port 54134
+9566835906	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54542" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofileWCAPfW"
+1679566836138	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1679566836214	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1679566836214	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1679566836214	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1679566836214	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: chrome://remote/content/RemoteAgent.jsm, line 36: Error: Remote agent is disabled by preference
+1679566837193	Marionette	INFO	Listening on port 54550
+DevTools listening on true
+1679566837413	Marionette	WARN	TLS certificate errors will be ignored for this session
+1679566893262	Marionette	INFO	Stopped listening on port 54550
+1679566897703	geckodriver	INFO	Listening on 127.0.0.1:54666
+1679566900723	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54667" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofilej3cEms"
+1679566900956	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1679566901032	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1679566901032	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1679566901032	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1679566901032	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: chrome://remote/content/RemoteAgent.jsm, line 36: Error: Remote agent is disabled by preference
+1679566902038	Marionette	INFO	Listening on port 54676
+DevTools listening on true
+1679566902232	Marionette	WARN	TLS certificate errors will be ignored for this session
+1679568343445	Marionette	INFO	Stopped listening on port 54676
+9567366138	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55285" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofilecQySKC"
+1679567366371	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1679567366447	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1679567366447	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1679567366447	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1679567366447	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: chrome://remote/content/RemoteAgent.jsm, line 36: Error: Remote agent is disabled by preference
+1679567367427	Marionette	INFO	Listening on port 55293
+DevTools listening on true
+1679567367645	Marionette	WARN	TLS certificate errors will be ignored for this session
+1679568342395	Marionette	INFO	Stopped listening on port 55293
+9568175957	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56254" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofile8kgHn1"
+1679568176192	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1679568176269	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1679568176269	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1679568176269	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1679568176269	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: chrome://remote/content/RemoteAgent.jsm, line 36: Error: Remote agent is disabled by preference
+1679568177257	Marionette	INFO	Listening on port 56262
+DevTools listening on true
+1679568177462	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 1276, Chrome_ChildThread] WARNING: pipe error: 232: file z:/task_1579288126/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 507
+1679571003689	Marionette	INFO	Stopped listening on port 56262
+1679575003030	geckodriver	INFO	Listening on 127.0.0.1:64090
+1679575006043	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64091" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofilezzkk5d"
+1679575006312	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1679575006393	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1679575006393	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1679575006393	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1679575006393	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: chrome://remote/content/RemoteAgent.jsm, line 36: Error: Remote agent is disabled by preference
+1679575008532	Marionette	INFO	Listening on port 64099
+DevTools listening on true
+1679575008654	Marionette	WARN	TLS certificate errors will be ignored for this session
+1679575253408	Marionette	INFO	Stopped listening on port 64099
+9575245617	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64487" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofile5iszxD"
+1679575245884	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1679575245973	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1679575245973	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1679575245973	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1679575245973	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: chrome://remote/content/RemoteAgent.jsm, line 36: Error: Remote agent is disabled by preference
+1679575248405	Marionette	INFO	Listening on port 64495
+DevTools listening on true
+1679575248728	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/ThumbnailsChild.jsm, line 29: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+1679575292782	Marionette	INFO	Stopped listening on port 64495
+1679575307434	geckodriver	INFO	Listening on 127.0.0.1:64641
+1679575310442	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64642" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofiler9HuFD"
+1679575310764	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1679575310870	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1679575310870	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1679575310870	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1679575310870	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: chrome://remote/content/RemoteAgent.jsm, line 36: Error: Remote agent is disabled by preference
+1679575313151	Marionette	INFO	Listening on port 64651
+DevTools listening on true
+1679575313553	Marionette	WARN	TLS certificate errors will be ignored for this session
+1679575543925	Marionette	INFO	Stopped listening on port 64651
+1679575548602	geckodriver	INFO	Listening on 127.0.0.1:65043
+1679575551619	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65044" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofileNXqeAl"
+1679575551863	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1679575551942	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1679575551942	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1679575551943	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1679575551943	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: chrome://remote/content/RemoteAgent.jsm, line 36: Error: Remote agent is disabled by preference
+1679575554136	Marionette	INFO	Listening on port 65053
+DevTools listening on true
+1679575554226	Marionette	WARN	TLS certificate errors will be ignored for this session
+1679575710013	Marionette	INFO	Stopped listening on port 65053
+9575678602	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65304" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofilebb6Ozn"
+1679575678922	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1679575678999	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1679575678999	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1679575679000	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1679575679000	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: chrome://remote/content/RemoteAgent.jsm, line 36: Error: Remote agent is disabled by preference
+1679575681093	Marionette	INFO	Listening on port 65313
+DevTools listening on true
+1679575681210	Marionette	WARN	TLS certificate errors will be ignored for this session

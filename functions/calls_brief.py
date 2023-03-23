@@ -37,7 +37,7 @@ def main():
         print('!!! error call_number !!!')
         return 
 
-    output = f'*Research Calls {call_number}*'.strip() + '\n\n' # генерируем заголовок типа Research Calls II
+    output = f'Research Calls {call_number}'.strip() # генерируем заголовок типа Research Calls II
     
     parser = BriefingParser(urls.url_r_calls) # переходим на страницу с колами
     soup = parser.soup # получаем html
@@ -52,7 +52,7 @@ def main():
         row_title = row.find('td', attrs={'class': 'articleColumn'}).find('div', attrs={'class': 'lip-title'}).text # заголовок новости
         if not row_title == output: # если заголовок не равен нашему заголовку например Research Calls II == Research Calls II
             continue
-        output += '\n'
+        output += f'*{output}*\n'
 
         row_text = row.find('td', attrs={'class': 'articleColumn'}).find('div', attrs={'class': 'lip-article'}).find('ul') # весь текст из тела новости лежит в таких элементах
         tmp = ''
@@ -69,7 +69,6 @@ def main():
                 to_write = 'call_2'
             elif call_number == 'III':
                 to_write = 'call_3'
-
             file.write(to_write + ',')
         
         output += tmp + '\n'

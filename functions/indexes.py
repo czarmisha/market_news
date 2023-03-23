@@ -96,6 +96,8 @@ def main():
         else:
             percent_ch = f"+{percent_ch}" if '-' not in percent_ch else percent_ch # добавим + в начало строки если в ней нет минуса изначально
 
+        if index == 'FTSE':
+            output += '\n'
         output += f"{index} {percent_ch} \n"
 
     calendar = finviz_parse()

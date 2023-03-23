@@ -28,6 +28,7 @@ week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 
 #TODO нужно проверять года если дата новости 22год декабрь, а в новости дата январь 5, то нужно проверить месяц в новости если меньше то год + 1
 def main():
+    print('**** indxch ****')
     now = datetime.datetime.now() # datetime
     today = now.strftime("%Y-%m-%d") 
     today = datetime.datetime.strptime(today, "%Y-%m-%d") 
@@ -71,10 +72,12 @@ def main():
                         except ValueError:
                             continue
                         
-                        if m + 1 > post_date.month:
+                        if m + 1 < post_date.month:
+                            print('post month: ', post_date.month, 'inside month: ', m)
                             year_now = f'{int(year_now) + 1}'
                         data_in_text = words[i] + "//" + str(day_x) + '//' + year_now # месяц//число//текущий год строка
                         data_in_text_dt = datetime.datetime.strptime(data_in_text, "%B//%d//%Y") # месяц//число//текущий год ДАТА
+                        #TODO if it is  monday????
                         prev_data_in_text_dt = data_in_text_dt - datetime.timedelta(days=1) # предыдущий день  дата ???
                         break
 
@@ -84,10 +87,12 @@ def main():
                         except ValueError:
                             continue
 
-                        if m + 1 > post_date.month:
+                        if m + 1 < post_date.month:
                             year_now = f'{int(year_now) + 1}'
+                            print('post month: ', post_date.month, 'inside month: ', m)
                         data_in_text = words[i] + "//" + str(day_x) + '//' + year_now  # месяц укороченный//число//текущий год строка
                         data_in_text_dt = datetime.datetime.strptime(data_in_text, "%b//%d//%Y") # месяц укороченный//число//текущий год ДАТА
+                        #TODO if it is  monday????
                         prev_data_in_text_dt = data_in_text_dt - datetime.timedelta(days=1) # предыдущий день  дата ???
                         break
             else:
@@ -133,12 +138,16 @@ def main():
                 if week_day == week[n] and week_now == week[n - 1]:
                     if today < data_in_text_dt:
                         tg_bot.send_post(cfg.CHANNEL_CHAT_ID, out)
+                        print('** indxch done **', out)
                         tg_bot.send_message("Index change occurred. Look at the channel!")
                 else:
                     pass
         elif prev_data_in_text_dt == today:
             tg_bot.send_post(cfg.CHANNEL_CHAT_ID, out)
+            print('** indxch done **', out)
             tg_bot.send_message("Index change occurred. Look at the channel!")
+
+        print(out)
         counter -= 1
 
     tg_bot.send_message("Index change checked!")

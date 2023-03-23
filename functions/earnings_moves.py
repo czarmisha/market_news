@@ -62,12 +62,15 @@ def main():
     #красиво печатаем все
     for gap in per_change:
         output += f'_{gap}_: '
+        print(gap, per_change[gap])
         for stock in per_change[gap]:
+            print(stock, per_change[gap][stock])
             output += f'*{stock}* {per_change[gap][stock]}; '
-        output = '\n\n'
+        output += '\n\n'
 
     print('-- done earning moves --')
-    print(output)
+    print(per_change)
+    print('!'*50, output)
     tg_bot = bot.BotHandler()
     tg_bot.send_post(output)
     tg_bot.send_message('-- done earning moves --')
