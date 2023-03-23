@@ -41,7 +41,7 @@ def main():
     schedule.every().monday.at("05:30").do(week_earnings)
     # планируем запуск функции earnings_moves каждый день в 06:00
     schedule.every().day.at("06:00").do(earnings_moves)
-    schedule.every().day.at("06:50").do(clean_file)
+    schedule.every().day.at("06:50").do(clean_file) # чистка файла прогресса research calls briefing 
     # планируем запуск функции earnings каждый день в 07:00
     schedule.every().day.at("07:00").do(earnings)
     # планируем запуск функции conf_calls каждый день в 07:40

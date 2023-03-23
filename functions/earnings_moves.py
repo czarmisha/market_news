@@ -61,6 +61,8 @@ def main():
 
     #красиво печатаем все
     for gap in per_change:
+        if not per_change[gap]:
+            continue
         output += f'_{gap}_: '
         print(gap, per_change[gap])
         for stock in per_change[gap]:
@@ -68,9 +70,10 @@ def main():
             output += f'*{stock}* {per_change[gap][stock]}; '
         output += '\n\n'
 
+    if output == 'Early earnings moves:\n\n': # если вывод не изменился от начала то ничего не делаем не печатаем
+        return
     print('-- done earning moves --')
-    print(per_change)
-    print('!'*50, output)
+    print(output)
     tg_bot = bot.BotHandler()
     tg_bot.send_post(output)
     tg_bot.send_message('-- done earning moves --')
