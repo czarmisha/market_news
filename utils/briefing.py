@@ -8,8 +8,8 @@ from config import urls
 
 options = FirefoxOptions()
 driver = webdriver.Firefox(options=options)
-driver.set_window_size(1500, 1200)
-driver.get(urls.url_briefing_domain)
+# driver.set_window_size(1500, 1200)
+# driver.get(urls.url_briefing_domain)
 
 # TODO comment
 class BriefingParser:
