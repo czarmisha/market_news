@@ -3,7 +3,7 @@ Research Calls (Briefing) (upgrades, downgrades, target changes и initiating, �
 """
 import datetime
 
-from utils.briefing import BriefingParser
+from main import parser
 from config import urls
 from telegram import bot
 
@@ -38,8 +38,9 @@ def main():
         return 
 
     output = f'Research Calls {call_number}'.strip() # генерируем заголовок типа Research Calls II
+    initial_output = output
     
-    parser = BriefingParser(urls.url_r_calls) # переходим на страницу с колами
+    parser.set_new_url(urls.url_r_calls) # переходим на страницу с колами
     soup = parser.soup # получаем html
     rows = soup.find_all('tr', class_='inplayRow') # получаем все строки
     today = datetime.datetime.now().strftime('%d-%b-%y')
@@ -74,9 +75,10 @@ def main():
         output += tmp + '\n'
         break
 
-    print(f'-- done research calls {call_number} (briefing) --')
-    print(output)
-    tg_bot = bot.BotHandler()
-    tg_bot.send_post(output)
-    tg_bot.send_message(f'-- done research calls {call_number} (briefing) --')
+    if not initial_output == output:
+        print(f'-- done research calls {call_number} (briefing) --')
+        print(output)
+        tg_bot = bot.BotHandler()
+        tg_bot.send_post(output)
+        tg_bot.send_message(f'-- done research calls {call_number} (briefing) --')
 

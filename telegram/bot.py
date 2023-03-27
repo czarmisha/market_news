@@ -40,7 +40,7 @@ class BotHandler:
         resp = requests.post(self.api_url + method, params)
         return resp
 
-    def send_file(self, channel_id, document, caption):
+    def send_file(self, document, caption, channel_id=cfg_credentials.CHANNEL_CHAT_ID):
         files = {'document': open(document, 'rb')}
         resp = requests.post(self.api_url + 'sendDocument?chat_id=' + channel_id + f'&caption={caption}', files=files)
         return resp

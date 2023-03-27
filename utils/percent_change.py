@@ -1,7 +1,13 @@
 import datetime
+import time
 import yfinance as yf
 import pandas as pd
+import finnhub
 
+from config.credentials import FINHUB_API_KEY
+
+
+finnhub_client = finnhub.Client(api_key=FINHUB_API_KEY)
 
 def get_current_percent_change(tickers):
     """
@@ -17,8 +23,10 @@ def get_current_percent_change(tickers):
     for ticker in tickers:
         if not ticker:
             continue
-        start = (datetime.datetime.now() - datetime.timedelta(days=7)).strftime('%Y-%m-%d') # любой день подойдет. главное чтобы не был выходным поэтому взял 7дней назад
-        end = datetime.datetime.now().strftime('%Y-%m-%d')
+
+        now = datetime.datetime.now()
+        start = (now - datetime.timedelta(days=7)).strftime('%Y-%m-%d') # любой день подойдет. главное чтобы не был выходным поэтому взял 7дней назад
+        end = now.strftime('%Y-%m-%d')
         try:
             # тянем историческую котировку за прошлую неделю(неважно) и берем самый последний день - это будет вчерашний торговый день. берем его закрытие
             close_pr = yf.Ticker(ticker).history(start=start, end=end).reset_index().iloc[-1].Close
@@ -34,14 +42,24 @@ def get_current_percent_change(tickers):
 
             change = round((curr_pr / close_pr - 1) * 100, 1) # считаем %
 
-            premarket_start_dt = datetime.datetime.now().replace(hour=4, minute=0, second=0, microsecond=0) # datetime начало премаркет сессии
-            volume = today_data[today_data.Datetime >= pd.Timestamp(premarket_start_dt, tz='America/New_York')].Volume.sum() # считаем объем с 4 до сейчас
+            premarket_start_dt = now.replace(hour=4, minute=0, second=0, microsecond=0) # datetime начало премаркет сессии
+            # volume = today_data[today_data.Datetime >= pd.Timestamp(premarket_start_dt, tz='America/New_York')].Volume.sum() # считаем объем с 4 до сейчас/ YFINANCE нет объема епта
+            ohlc = finnhub_client.stock_candles(ticker, '1', int(time.mktime(premarket_start_dt.timetuple())),
+                                            int(time.mktime(now.timetuple())))
+            volume = sum(ohlc['v'])
+            
+            if ohlc['s'] == 'no_data': # if `s` attribute of response == `ok` то все норм. если не норм - `no_data`
+                continue
 
+            print(f'ticker: {ticker}, volume: {volume}, change: {change}') #TODO
             volume_str = str(volume)
             if len(volume_str) < 7:
                 volume_str = f'{round(volume / 1000, 2)}k'
             elif len(volume_str) >=7:
                 volume_str = f'{round(volume / 1000000, 2)}M'
+
+            if float(volume_str[:-1]) == 0.0:
+                continue
 
             # добавляем в наш объект и если изменение > 0, добавляем `+` в начало. и всем `%` в конец
             if change > 0:

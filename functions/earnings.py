@@ -12,12 +12,16 @@ from telegram import bot
 def main():
     print('**** Earnings ****')
     output = 'Earnings:\n\n'
+    try:
+        with open('tmp/bmo_list.txt', 'r') as file: # берем с файла список тикеров с отчетами bmo
+            bmo = file.read().split(',')
 
-    with open('tmp/bmo_list.txt', 'r') as file: # берем с файла список тикеров с отчетами bmo
-        bmo = file.read().split(',')
-
-    with open('tmp/amc_list.txt', 'r') as file: # берем с файла список тикеров с отчетами amc
-        amc = file.read().split(',')
+        with open('tmp/amc_list.txt', 'r') as file: # берем с файла список тикеров с отчетами amc
+            amc = file.read().split(',')
+            
+    except FileNotFoundError:
+        print('!! file not found !!')
+        return
     
     # для всех тикеров получаем объект вида {'GapUp': {'CSIQ': '+15.9%', 'ONON': '+25.2%'}, 'GapDown': {'HUYA': '-15.1%', 'TME': '-9.1%'}}
     per_change = get_current_percent_change(bmo + amc)
@@ -29,11 +33,13 @@ def main():
             output += f'*{stock}* {per_change[gap][stock]}; '
         output += '\n\n'
     
-    output += '-----*AMC*-----'
+    if amc:
+        output += '-----*AMC*-----\n'
     for ticker in amc:
         output += f'{ticker}\n'
 
-    output += '\n-----*BMO*-----'
+    if bmo:
+        output += '\n-----*BMO*-----\n'
     for ticker in bmo:
         output += f'{ticker}\n'
 

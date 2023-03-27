@@ -11,9 +11,13 @@ from functions.lockups import main as lockups
 from functions.indxch import main as indxch
 from functions.calls_mbeat import main as calls_mbeat
 from functions.calls_brief import main as calls_brief
-
+from functions.is_triple import is_triple_quadruple
+from utils.briefing import BriefingParser
 import config.execution_time as cfg_time
+from config import urls
 
+
+parser = BriefingParser(urls.url_inPlay)
 
 def clean_file():
     """просто файл отслеживаться какой из 3х калов уже были отправлены во избежании повторений"""
@@ -30,10 +34,11 @@ def main():
     # calls_brief()
     # earnings()
     # earnings_moves()
-    indxch()
+    # indxch()
     print('****** PROGRAM STARTING ******')
     tg_bot = bot.BotHandler()
     tg_bot.send_message('*Program starting*')
+
 
     # планируем запуск функции indexes каждый день в 05:00
     schedule.every().day.at("05:00").do(indexes)
@@ -46,6 +51,8 @@ def main():
     schedule.every().day.at("07:00").do(earnings)
     # планируем запуск функции conf_calls каждый день в 07:40
     schedule.every().day.at("07:40").do(conf_calls)
+    # планируем запуск функции is_triple_quadruple каждую пятницу в 08:04
+    schedule.every().friday.at("08:04").do(is_triple_quadruple)
     # планируем запуск функции calls_mbeat каждый день в 08:05
     schedule.every().day.at("08:05").do(calls_mbeat)
     # планируем запуск функции ipo каждую неделю в 13:00
@@ -53,18 +60,18 @@ def main():
     # планируем запуск функции lockups каждый день в 09:01
     schedule.every().day.at("09:01").do(lockups)
     # планируем запуск функции calls_mbeat каждый день в 09:05
-    schedule.every().day.at("09:05").do(calls_mbeat)
+    schedule.every().day.at("09:05").do(calls_mbeat, first=False)
     # планируем запуск функции indxch каждый день в 13:00
     schedule.every().day.at("13:00").do(indxch)
-
-    #TODO quadruple triple etc every friday
+    # планируем запуск функции is_triple_quadruple каждую пятницу в 15:00
+    schedule.every().friday.at("08:04").do(is_triple_quadruple)
 
     # research calls. 
     for check_time in cfg_time.research_calls_briefing:
         schedule.every().day.at(check_time).do(calls_brief)
 
 
-    while True:
+    while True:   
         # запускаем планировщик
         schedule.run_pending()
         time.sleep(1)

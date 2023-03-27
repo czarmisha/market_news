@@ -5,7 +5,7 @@
 """
 import datetime
 from telegram import bot
-from utils.briefing import BriefingParser
+from main import parser
 import config.urls as urls
 
 
@@ -30,7 +30,7 @@ def main():
 
     today = datetime.datetime.now().replace(hour=0, minute=0, second=0, microsecond=0) # сегодня в формате Datetime без часов минут и тд
 
-    parser = BriefingParser(urls.url_indxch) # парсим url
+    parser.set_new_url(urls.url_indxch) # парсим url
     soup = parser.soup # получаем html
 
     posts = soup.find_all('div', attrs={"class": "lip-briefing-wrap"}) # все контейнеры с текстом новости

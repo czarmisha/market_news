@@ -1,4 +1,5 @@
 url_inPlay = 'https://www.briefing.com/InPlayEq/InPlay/InPlay.htm'
+url_tickerEarn = 'https://www.briefing.com/InPlayEq/Search/ticker.htm' # conference calls
 url_r_calls = 'https://www.briefing.com/InPlayEq/Search/ticker.htm?ticker=calls&range=6'
 url_week_earn_cal = 'https://www.briefing.com/DisplayArticle/PagePopup.aspx?PageId=-8252'
 url_earn_today = 'https://www.briefing.com/DisplayArticle/PagePopup.aspx?PageId=-8250'

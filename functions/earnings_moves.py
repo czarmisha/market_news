@@ -6,7 +6,7 @@ Early earnings moves (GapUp-ы и GapDown-ы по акциям, которые �
 
 """
 from config import urls
-from utils.briefing import BriefingParser
+from main import parser
 from utils.percent_change import get_current_percent_change
 from telegram import bot
 
@@ -44,7 +44,7 @@ def main():
     output = 'Early earnings moves:\n\n'
     bmo, amc = [], []
 
-    parser = BriefingParser(urls.url_earn_today) # открываем страницу c отчетами за сегодня
+    parser.set_new_url(urls.url_earn_today) # открываем страницу c отчетами за сегодня
     soup = parser.soup # получаем html
     bmo = get_tickers(soup, 'yui-gen7') # ищем  все bmo тикеры (они всегда в таблице с id 'yui-gen7')
     with open('tmp/bmo_list.txt', 'w') as file: # записываем в файл
